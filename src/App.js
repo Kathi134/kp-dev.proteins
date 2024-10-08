@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import MainLayout from './app/global/MainLayout';
+import Home from './app/main/Home'
+import UserInfo from './app/UserInfo';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/user" element={<UserInfo />} />
+          {/*<Route path="/schedules" element={<Schedules />} />*/}
+          {/*<Route path="/schedules/create" element={<ScheduleEditAdd add/>} />*/}
+          {/*<Route path="/schedules/:id" element={<ScheduleDetail />} />*/}
+          {/*<Route path="/schedules/:id/create?" element={<WorkoutEditAdd add/>} />*/}
+          {/*<Route path="/schedules/:sId/:wId" element={<WorkoutDetail />} />*/}
+          {/*<Route path="/exercises" element={<Exercises />} />*/}
+          {/*<Route path="/exercises/:id" element={<ExerciseDetail />} />*/}
+          {/*<Route path="/exercises/create" element={<ExerciseEditAdd add/>} />*/}
+        </Routes>
+      </MainLayout>
+    </BrowserRouter>
   );
 }
 
 export default App;
+

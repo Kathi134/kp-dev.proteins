@@ -1,0 +1,12 @@
+.react-icon {
+    vertical-align: middle;
+}
+
+a {
+    all: unset;
+}
+
+.logo {
+    color: var(--primary-highlight);
+    background-color: var(--secondary-highlight);
+}

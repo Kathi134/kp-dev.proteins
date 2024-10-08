@@ -1,0 +1,208 @@
+html, body, #root {
+    margin: 0;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--darkgrey)
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#box {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    position: relative;
+}
+
+header {
+    flex: 0 1 auto;
+    background-color: var(--lightgrey);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.3rem 2rem;
+}
+
+main {
+    flex: 1 1 auto;
+    position: relative;
+    padding: 1rem;
+}
+
+#children-container {
+    margin-bottom: 4rem;
+}
+
+footer {
+    background-color: var(--lightgrey);
+    padding: 0.3rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+:root {
+    --primary-highlight: #71a736;
+    --transparent-primary-highlight: rgba(113, 167, 54, 0.5);
+    --secondary-highlight: #e69630;
+    --transparent-secondary-highlight: rgba(230, 150, 48, 0.5);
+    --lightgrey: #ebebeb;
+    --mediumgrey: #acacac;
+    --transparent-mediumgrey: #acacac80;
+    --darkgrey: #666666;
+    --transparent-darkgrey: #66666680;
+    --black: #000000;
+    --transparent-black: #00000080;
+}
+
+.vertical-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.horizontal-container {
+    display: flex;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.evenly {
+    justify-content: space-evenly;
+}
+
+.around {
+    justify-content: space-around;
+}
+
+.centered-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.circle-btn-container {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+}
+
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.padding-right {
+    padding-right: 0.5rem;
+}
+
+.spread {
+    flex: 1;
+}
+
+h1 {
+    color: var(--black);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+h2.first {
+    color: var(--secondary-highlight);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 0rem;
+}
+
+h2 {
+    color: var(--secondary-highlight);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+
+h3 {
+    margin: 0;
+    color: var(--black);
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+table {
+    border: 1px solid var(--lightgrey);
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid var(--lightgrey);
+    border-collapse: collapse;
+    padding: 10px;
+    color: var(--darkgrey);
+}
+
+.black th, .black td {
+    border: 1px solid var(--lightgrey);
+    border-collapse: collapse;
+    padding: 10px;
+    color: var(--black);
+}
+
+.table-row-link {
+    display: contents;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.top-margin {
+    margin-top: 1rem;
+}
+
+.bottom-margin {
+    margin-bottom: 1rem;
+}
+
+.flex-item-extend {
+    flex: 1 1 auto;
+}
+
+.no-border {
+    border: none;
+}
+
+.black {
+    color: var(--black);
+}
+
+.royalblue {
+    color: var(--secondary-highlight);
+}
+
+.right {
+    float:right
+}
+
+.orange {
+    color: var(--primary-highlight);
+}
+
+.test {
+    background-color: var(--primary-highlight);
+}
