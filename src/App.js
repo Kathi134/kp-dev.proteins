@@ -1,7 +1,10 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import MainLayout from './app/global/MainLayout';
-import Home from './app/main/Home'
+import Home from './app/pages/track/Home'
 import UserInfo from './app/UserInfo';
+import {Foods} from "./app/pages/food/Foods";
+import {FoodDetails} from "./app/pages/food/FoodDetails";
+import {GroceryEditAdd} from "./app/pages/food/GroceryEditAdd";
 
 function App() {
   return (
@@ -10,9 +13,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/user" element={<UserInfo />} />
-          {/*<Route path="/schedules" element={<Schedules />} />*/}
-          {/*<Route path="/schedules/create" element={<ScheduleEditAdd add/>} />*/}
-          {/*<Route path="/schedules/:id" element={<ScheduleDetail />} />*/}
+          <Route path="/foods" element={<Foods />} />
+          <Route path="/foods/create-grocery" element={<GroceryEditAdd add/>} />
+          {/*<Route path="/foods/create-dish" element={<DishEditAdd add/>} />*/}
+          <Route path="/foods/:id" element={<FoodDetails />} />
           {/*<Route path="/schedules/:id/create?" element={<WorkoutEditAdd add/>} />*/}
           {/*<Route path="/schedules/:sId/:wId" element={<WorkoutDetail />} />*/}
           {/*<Route path="/exercises" element={<Exercises />} />*/}
