@@ -1,14 +1,14 @@
 import { IconContext } from 'react-icons';
-import { FaFolder } from 'react-icons/fa'
-import { GoHomeFill } from "react-icons/go";
-import { IoBarbell } from "react-icons/io5";
+import { BiFoodMenu } from "react-icons/bi";
+import { BiDoughnutChart } from "react-icons/bi";
 import { NavLink, useLocation } from 'react-router-dom';
 import '../menu.css'
+import {GiForkKnifeSpoon} from "react-icons/gi";
 
 const MENU_ICONS = {
-    '': <GoHomeFill/>,
-    'schedules': <FaFolder/>,
-    'exercises': <IoBarbell style={{float: 'right'}}/>,
+    '': <BiDoughnutChart />,
+    'foods': <GiForkKnifeSpoon />,
+    'history': <BiFoodMenu/>,
 }
 
 function MenuItem({destination, displayName}) {

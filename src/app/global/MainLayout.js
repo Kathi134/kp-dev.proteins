@@ -13,9 +13,9 @@ export default function MainLayout({children}) {
 
         <footer>
             <nav className='horizontal-container evenly'>
-                <MenuItem destination="" displayName="Home"/>
-                <MenuItem destination="schedules" displayName="Pläne"/>
-                <MenuItem destination="exercises" displayName="Übungen"/>
+                <MenuItem destination="" displayName="Track"/>
+                <MenuItem destination="foods" displayName="Foods"/>
+                <MenuItem destination="history" displayName="History"/>
             </nav>
         </footer>
     </>);
