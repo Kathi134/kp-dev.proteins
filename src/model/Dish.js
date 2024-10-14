@@ -1,11 +1,16 @@
 import {v4 as uuidv4} from 'uuid';
+import {Portion} from "./Portion";
 
 class DishComponent {
     getProteinsPer100g() {}
     getCaloriesPer100g() {}
 
     getProteinCaloriesRatio() {
-        return (this.getProteinsPer100g() / this.getCaloriesPer100g()).toFixed(2);
+        return (this.getProteinsPer100g() / this.getCaloriesPer100g());
+    }
+
+    getProteinsForPortion(portion) {
+         return ((this.getProteinsPer100g() / 100.0) * portion.amount);
     }
 }
 
@@ -38,7 +43,7 @@ class Grocery extends DishComponent {
         this.proteinsPer100g = proteins;
         this.caloriesPer100g = calories;
         this.barcode = barcode;
-        this.portionSize = portionSize;
+        this.portion = new Portion(portionSize);
     }
 
     getProteinsPer100g() {
