@@ -1,5 +1,7 @@
 import {Link} from "react-router-dom";
 import {useCallback, useState} from "react";
+import {BiSolidPear} from "react-icons/bi";
+import {TbDna} from "react-icons/tb";
 
 export default function FoodTable({data, setData}) {
     const [toggleAlphabet, setToggleAlphabet] = useState(1);
@@ -11,7 +13,7 @@ export default function FoodTable({data, setData}) {
     }, [data, setData, toggleAlphabet, setToggleAlphabet])
 
     const onProteinHeaderClick = useCallback(() => {
-        setData(data.sort((a, b) => toggleProteins * a.name.localeCompare(b.name)));
+        setData(data.sort((a, b) => toggleProteins * (a.proteinsPer100g - b.proteinsPer100g))); // TODO: fix me
         setToggleProteins(-toggleProteins)
     }, [data, setData, toggleProteins, setToggleProteins])
 
@@ -19,8 +21,8 @@ export default function FoodTable({data, setData}) {
         <table>
             <thead>
             <tr>
-                <th onClick={onNameHeaderClick}>Name</th>
-                <th onClick={onProteinHeaderClick}>Gains<br/>/100g</th>
+                <th onClick={onNameHeaderClick} className="secondary"><BiSolidPear /></th>
+                <th onClick={onProteinHeaderClick} className="secondary third"><TbDna />/100g</th>
             </tr>
             </thead>
             <tbody>
