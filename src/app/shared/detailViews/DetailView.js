@@ -1,5 +1,4 @@
-
-import {useCallback, useMemo, useState} from "react";
+import {useState} from "react";
 import Back from "../editAddViews/Back";
 import {SimpleCircleButton} from "../CircleButton";
 

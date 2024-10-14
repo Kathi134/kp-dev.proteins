@@ -1,7 +1,7 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import MainLayout from './app/global/MainLayout';
-import Home from './app/pages/track/Home'
-import UserInfo from './app/UserInfo';
+import Tracking from './app/pages/track/Tracking'
+import UserInfo from './app/pages/user/UserInfo';
 import {Foods} from "./app/pages/food/Foods";
 import {FoodDetails} from "./app/pages/food/FoodDetails";
 import {GroceryEditAdd} from "./app/pages/food/GroceryEditAdd";
@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <MainLayout>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Tracking />} />
           <Route path="/user" element={<UserInfo />} />
           <Route path="/foods" element={<Foods />} />
           <Route path="/foods/create-grocery" element={<GroceryEditAdd add/>} />

@@ -1,4 +1,3 @@
-import { MdCancel, MdCheckCircle } from "react-icons/md";
 import { useCallback, useState, useEffect } from "react";
 
 export default function Choice({isOpen, options, optionIcons, onOptionClick, optionValues, text}) {
