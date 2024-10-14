@@ -6,7 +6,7 @@ export function GroceryEditAdd({add, edit, targetItem, clearEdit}) {
     const [barcode, setBarcode] = useState(targetItem?.barcode ?? '')
     const [proteins, setProteins] = useState(targetItem?.proteinsPer100g ?? '')
     const [calories, setCalories] = useState(targetItem?.caloriesPer100g ?? '')
-    const [portionSize, setPortionSize] = useState(targetItem?.portionSize ?? '')
+    const [portionSize, setPortionSize] = useState(targetItem?.portion.amount ?? '')
 
     const saveNew = useCallback(() => {
         console.log("send post to api")

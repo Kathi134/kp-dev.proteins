@@ -18,8 +18,8 @@ export function FoodDetails() {
             {!food.components && <PropertyDisplay icon={FaBarcode}> {food.barcode}</PropertyDisplay> }
 
             <PropertyDisplay icon={TbDna} iconSize="1rem"> {food.getProteinsPer100g()}g Protein pro 100g </PropertyDisplay>
-            <PropertyDisplay icon={FaChartPie} iconSize="1rem"> {food.getProteinCaloriesRatio()} Protein : 1 Kcal </PropertyDisplay>
-            <PropertyDisplay icon={IoScale}> {food.portionSize}g normale Portionsgröße </PropertyDisplay>
+            <PropertyDisplay icon={FaChartPie} iconSize="1rem"> {food.getProteinCaloriesRatio().toFixed(2)} Protein : 1 Kcal </PropertyDisplay>
+            <PropertyDisplay icon={IoScale}> {food.portion.amount}g normale Portionsgröße </PropertyDisplay>
 
             {food.components &&
                 <div className="top-margin">
