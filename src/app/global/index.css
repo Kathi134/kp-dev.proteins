@@ -50,8 +50,8 @@ footer {
 :root {
     --primary-highlight: #71a736;
     --transparent-primary-highlight: rgba(113, 167, 54, 0.5);
-    --secondary-highlight: #e69630;
-    --transparent-secondary-highlight: rgba(230, 150, 48, 0.5);
+    --secondary-highlight: #d9ed9f;
+    --transparent-secondary-highlight: rgba(217, 237, 159, 0.5);
     --lightgrey: #ebebeb;
     --mediumgrey: #acacac;
     --transparent-mediumgrey: #acacac80;
